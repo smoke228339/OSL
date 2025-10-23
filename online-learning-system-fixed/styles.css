@@ -1,0 +1,357 @@
+:root {
+  --primary: #3a6eff;
+  --accent: #00c389;
+  --bg: #f7f9fc;
+  --surface: #fff;
+  --text: #1f2a37;
+  --muted: #6b7280;
+  --ring: rgba(58, 110, 255, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  background: var(--surface);
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.brand .logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+}
+
+.menu {
+  display: flex;
+  gap: 18px;
+}
+
+.menu a {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.menu a.active {
+  color: var(--primary);
+}
+
+.hero {
+  background: linear-gradient(180deg, #eef3ff, transparent);
+  padding: 52px 0 28px;
+}
+
+.hero h1 {
+  font-size: clamp(28px, 3.4vw, 44px);
+  margin: 8px 0;
+}
+
+.hero p {
+  color: var(--muted);
+  max-width: 60ch;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
+}
+
+.card h3 {
+  margin: 8px 0 6px;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 4px 10px;
+  border: 1px solid #dbeafe;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: var(--primary);
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cta {
+  background: var(--primary);
+  color: #fff;
+  border: 0;
+}
+
+.cta.secondary {
+  background: #1118270d;
+  color: var(--text);
+  border: 1px solid #e5e7eb;
+}
+
+.section {
+  padding: 28px 0;
+}
+
+.footer {
+  margin-top: 40px;
+  background: var(--surface);
+  border-top: 1px solid #e5e7eb;
+  color: var(--muted);
+}
+
+.footer .names {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.kpis {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.kpi {
+  background: var(--surface);
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 14px 16px;
+  min-width: 180px;
+}
+
+.kpi .num {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.kpi .lbl {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.list {
+  display: grid;
+  gap: 10px;
+}
+
+.list li,
+.input,
+.filter {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.table th,
+.table td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.table th {
+  background: #f9fafb;
+  font-size: 14px;
+  color: #111827;
+}
+
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.search {
+  display: flex;
+  gap: 10px;
+}
+
+.enroll {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+ul.checks {
+  padding-left: 22px;
+}
+
+ul.checks li {
+  margin: 6px 0;
+}
+
+.star {
+  font-size: 30px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.star.selected {
+  color: gold;
+}
+
+/* Стили для блока с прогрессом */
+#courseProgress {
+  font-size: 24px;
+  font-weight: bold;
+  color: #029eff; /* Зеленый цвет для прогресса */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Стили для кнопки обновления прогресса */
+#updateProgressBtn {
+  background-color: #0184ff; /* Зеленый фон для кнопки */
+  color: white; /* Белый текст */
+  border: none;
+  padding: 15px 32px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: block; /* Центрирование кнопки */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Стили для кнопки при наведении */
+#updateProgressBtn:hover {
+  background-color: #0077ff; /* Немного темнее зеленый при наведении */
+}
+
+/* Стили для блоков с прогрессом */
+#courseProgress {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333; /* Темный цвет текста */
+  text-align: center;
+}
+
+/* Стили для кнопки Read More */
+#readMoreBtn {
+  background-color: #0b85f7;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* Стили для кнопки при наведении */
+#readMoreBtn:hover {
+  background-color: #006aff;
+}
+
+/* Стили для скрытого контента */
+#extraContent {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#timeButton {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#timeButton:hover {
+  background-color: #45a049;
+}
+
+#timeDisplay {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Анимация для кнопки */
+button {
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.1); /* Увеличение размера кнопки при наведении */
+}

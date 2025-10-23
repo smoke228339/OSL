@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Courses — Znanija Land</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/upgrade.css" />
+    <link rel="stylesheet" href="css/upgrade.css?v=2" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container nav">
+        <a class="brand" href="index.html"
+          ><span class="logo" aria-hidden="true"></span> Znanija Land</a
+        >
+        <nav class="menu">
+          <a href="index.html">Home</a>
+          <a class="active" href="courses.html">Courses</a>
+          <a href="course-detail.html">Course</a>
+          <a href="about.html">About</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container">
+        <div class="masthead">
+          <h1 style="margin: 0">All Courses</h1>
+          <ul id="coursesList"></ul>
+          <ul id="courseNamesList"></ul>
+
+          <div class="search">
+            <input
+              class="input"
+              type="search"
+              placeholder="Search courses…"
+              aria-label="Search"
+            />
+            <select class="filter" aria-label="Category">
+              <option>All categories</option>
+              <option>Web</option>
+              <option>Data</option>
+              <option>Languages</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="section grid">
+          <article class="card">
+            <span class="badge">Web</span>
+            <h3>WEB Technologies</h3>
+            <p>Build your first 3 websites with semantic HTML & modern CSS.</p>
+            <a class="cta" href="course-detail.html">Start</a>
+          </article>
+          <article class="card">
+            <span class="badge">Data</span>
+            <h3>Intro to Python</h3>
+            <p>Learn variables, loops, functions and read/write files.</p>
+            <a class="cta" href="#">Start</a>
+          </article>
+          <article class="card">
+            <span class="badge">Languages</span>
+            <h3>English for Tech</h3>
+            <p>Level up your speaking and writing .</p>
+            <a class="cta" href="#">Start</a>
+          </article>
+          <article class="card">
+            <span class="badge">Math</span>
+            <h3>Discrete Math Basics</h3>
+            <p>Logic, sets, graphs, and counting techniques.</p>
+            <a class="cta" href="#">Start</a>
+          </article>
+          <article class="card">
+            <span class="badge">spoiler</span>
+            <h3>New subject</h3>
+            <p>will be soon...</p>
+            <a class="cta" href="#">Start</a>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container" style="padding: 16px 0">
+        <div>© 2025 Znanija Land</div>
+        <div class="names">Team:SE-240 Алиби • Султан</div>
+      </div>
+    </footer>
+    <script src="/upgrade.js"></script>
+    <script defer src="js/upgrade.js?v=2"></script>
+  </body>
+</html>
